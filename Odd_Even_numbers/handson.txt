@@ -1,0 +1,224 @@
+--- 1 program
+
+package handson1.demo;
+import java.util.Scanner;
+
+public class Odd_Even_numbers {
+
+	private static Scanner inputvariable = new Scanner( System.in );
+
+	public static void main(String[] args) {
+		
+		int t;
+		
+		System.out.println("Please input the number");
+		int a = inputvariable.nextInt();
+		t=a%2;
+		
+		if(t == 0) {
+		
+		System.out.println("Entered integer is an even number");		
+	
+	}else {
+		System.out.println("Entered integer is odd number3");
+	} 
+	}
+};
+
+--- 2
+
+package JavaHandsOnpkg;
+import java.util.*;
+
+public class VowelCon {
+	
+	
+	private static Scanner variable = new Scanner (System.in) ;
+	
+	public static void main(String[] args) {
+		System.out.println("Please enter any alphabet");
+		
+		String[] arr = { "a", "e", "i","o","u" };
+	    Set<String> names = new HashSet<String>(Arrays.asList(arr));
+	
+		String console_variable=variable.nextLine().toUpperCase();;
+		
+		switch(console_variable) {
+		case "A":
+			System.out.println("Vowel");
+		break;
+		case "E": 
+			System.out.println("Vowel");
+		break;
+		case "I": 
+			System.out.println("Vowel");
+		break;
+		case "O": 
+			System.out.println("Vowel");
+		break;
+		case "U": 
+			System.out.println("Vowel");
+		break;
+		default:
+			System.out.println("Consonanat");
+		
+		}
+		
+	}
+	
+
+}
+
+
+// programe for character occ
+package OcurrenceChar;
+
+public class OcurrenceCharCounts {
+
+	public static void main(String[] args) {
+		String str1="My First Learning program";
+		String str=str1.toUpperCase();
+		String a[]=str.split(" ");
+
+		
+		int[] cnt = new int[255];		//created int array 
+ 
+		for (int i = 0; i < str.length(); i++) {
+
+			cnt[str.charAt(i)]++;
+			//System.out.println(cnt[str.charAt(i)]);  //print array value or position
+		}
+ 
+		char[] ch = new char[str.length()];   //new char assinged for comparison
+		for (int i = 0; i < str.length(); i++) {
+			ch[i] = str.charAt(i);
+			int tt = 0;
+			for (int j = 0; j <= i; j++) {
+				if (str.charAt(i) == ch[j])
+					tt++;
+			}
+ 
+			if (tt == 1) {
+				System.out.println("Occurrence of " + str.charAt(i) + " is " + cnt[str.charAt(i)]);
+			}
+		}
+	}
+}
+
+------------------
+
+for duplicate 
+
+package DupChar;
+
+public class DupCha {
+
+	public static void main(String[] args) {
+		
+		String str1="My First Learning program";
+		String str=str1.toUpperCase();
+		String a[]=str.split(" ");
+
+		
+		int[] cnt = new int[255];		 
+ 
+		for (int i = 0; i < str.length(); i++) {
+
+			cnt[str.charAt(i)]++;
+		}
+ 
+		char[] ch = new char[str.length()];
+		for (int i = 0; i < str.length(); i++) {
+			ch[i] = str.charAt(i);
+			int tt = 0;
+			for (int j = 0; j <= i; j++) {
+				if (str.charAt(i) == ch[j])
+					tt++;
+			}
+ 
+			if (tt > 1) {
+				System.out.println("Duplicate Characters are " + str.charAt(i) +" " + cnt[str.charAt(i)]);
+			}
+		}
+	}
+}
+		
+
+
+-----reverse
+package ReverseArrayPrint;
+
+public class ReverseArrayPrint {
+
+	public static void main(String[] args) {
+		String str1="My First Learning program";
+		String str=str1.toUpperCase();
+		String a[]=str.split(" ");
+		//int i = str.length();
+		//System.out.println( i);
+		
+		//char ch = str.charAt(i) ;
+		//System.out.println( ch);
+		char[] ch = str.toCharArray(); 
+
+ 
+		for (int i = ch.length-1; i>=0;i--) {
+
+			System.out.println(ch[i]);
+		
+			}
+		}
+	}
+
+
+---------------------------
+char to string array
+
+package CharArrayConversion;
+
+import java.util.Arrays;
+
+public class CharArrayConversion {
+
+	public static void main(String[] args) {
+		String str1="My First Learning program";
+		
+		char[] ch = str1.toCharArray();
+		String sr= Arrays.toString(ch);
+		System.out.println(sr);
+
+	}
+
+}	
+
+---------------------
+combine array
+
+package CombineArrayDup09;
+
+import java.util.Arrays;
+
+public class CombineArrayDup09 {
+
+	public static void main(String[] args) {
+		int a[]={1,2,3,4};
+		
+		int b[]={3,3,6,5};
+		
+		int c[];
+		
+		c=new int[a.length + b.length];
+		
+ for(int i=0;i < a.length;i++) {
+	 c[i]=a[i];
+	 
+ }
+ for(int i=0;i < b.length;i++) {
+	 c[a.length + i]=b[i];
+	 
+ }
+		
+		System.out.print(Arrays.toString(c));
+	
+	}
+}
