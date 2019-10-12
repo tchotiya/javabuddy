@@ -21,8 +21,25 @@ public class CombineArrayDup09 {
 	 c[a.length + i]=b[i];
 	 
  }
-		
+ //Arrays.sort(c);
 		System.out.print(Arrays.toString(c));
+		
+		
+		
+		for(int i=0;i<c.length;i++) {
+			boolean dis_flag = true;
+			
+			for(int j=0;j<i;j++)
+			   {
+				if(c[i] ==c[j]) 	{
+					dis_flag=false;
+					break;
+				}
+				}
+				 if(dis_flag) {
+					System.out.println("Distinct values in the array are " + c[i]);		
+				 }	
+			}
+		}
 	
 	}
-}
